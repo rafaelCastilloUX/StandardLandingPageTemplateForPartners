@@ -1,0 +1,195 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&family=Poppins:wght@400;700;800&display=swap');
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Brand v1.0.1  08/04/2023 */
+:root {
+  --button-verde: var(--color-verde);
+  --buttons-verde-hover: #24c742;
+  --color-azul: #1E93FF;
+  --color-principal: #1F262E;
+  --color-verde: #40FF62;
+  --sombra: 0 4px 11px rgba(0, 128, 96, 0.35);
+}
+
+/* Custom styles */
+body {
+  background-color: #f9f9f9;
+  color: var(--color-principal);
+  font-family: 'Mulish', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+.bg-navy{
+  background-color: var(--color-principal);
+}
+
+.bg-verde{
+  background-color: var(--color-verde);
+}
+
+.btn-azul{
+  background-color: var(--color-azul);
+  color: whitesmoke;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.btn-verde {
+  background-color: var(--button-verde);
+  color: var(--color-principal);
+  font-weight: 600;
+}
+
+.btn-verde:hover {
+  background-color: var(--buttons-verde-hover);
+  box-shadow: var(--sombra);
+  color: whitesmoke;
+}
+
+
+.dettails{
+  align-items: flex-start;
+  align-self: stretch;
+  background: var(--color-verde);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  gap: 1rem;
+  line-height:167.619%;
+  padding: 30px 50px;
+}
+.fw-bold {
+  font-weight: 800!important;
+}
+
+h1, h2, h3 { 
+  font-family: 'Poppins', sans-serif;
+}
+
+h4, h5 {
+  font-family: 'Mulish', sans-serif;
+}
+
+.hgroup{
+  margin-bottom: 2.5em;
+  margin-top: 2.5em;
+}
+/* HERO SECCION */
+.feature-icon {
+  height: 3rem;
+  width: 3rem;
+}
+
+.feature-icon img {
+  width: inherit;
+}
+.figure-container {
+  position: relative;
+  display: inline-block; /* O display: block; dependiendo de cómo quieras usarlo */
+}
+
+.figure-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.figcaption-label {
+  background: rgba(0, 0, 0, 0.7);
+  bottom: 15%;
+  border-radius: 5px;
+  color: white;
+  display: block;
+  font-size: 20px;
+  font-weight: 700;
+  left: 50%;
+  position: absolute;
+  padding: 5px 10px;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+.medalla-title-card{
+  margin-right: -1rem;
+  z-index: 3;
+}
+
+.navbar {
+  background-color: var(--color-principal);
+}
+.navbar-toggler{
+  border: 2px solid whitesmoke;
+  color: whitesmoke;
+  line-height: 1.5;
+}
+
+/* INFO SECTION */
+.subheading * {
+  font-weight: 600;
+}
+
+.subheading span {
+  color: var(--color-azul);
+}
+
+.text-azul {
+  color: var(--color-azul);
+}
+
+.text-verde {
+  color: var(--color-verde);
+}
+
+/* MAP SECTION */
+
+section.map{
+  background: linear-gradient(180deg, var(--color-azul) 49.70%, whitesmoke 49.71%);
+}
+.what-to-expect{
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 5px 5px 0 0;
+  display: block;
+  padding: 20px 40px;
+}
+
+/* Footer */
+
+footer .list-group-item {
+  background-color: transparent;
+  border: 0;
+}
+footer .list-group-item>a{text-decoration: none;}
+
+/* Media query para resolución SM (576px y superior) */
+@media (min-width: 576px) and (max-width: 991.98px)  {
+  .mapa-users {
+    position: relative;
+    bottom: 0;
+  }
+}
+
+/* Media query para resolución MD (992px y superior) */
+@media (min-width: 992px) {
+  .btn-verde{
+    font-size: 1.27rem;
+  }
+  .mapa-users {
+    position: absolute;
+    bottom: -80px;
+  }
+  .navbar{
+    background-color: transparent;
+  }
+}
