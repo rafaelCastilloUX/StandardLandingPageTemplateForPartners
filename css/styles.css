@@ -18,6 +18,13 @@
 }
 
 /* Custom styles */
+
+.accordion-button:not(.collapsed){
+  background-color:var(--color-verde);
+  color: #111;
+}
+
+
 body {
   background-color: #f9f9f9;
   color: var(--color-principal);
@@ -85,6 +92,11 @@ h4, h5 {
   margin-bottom: 2.5em;
   margin-top: 2.5em;
 }
+
+
+.item-carousel{
+  transition: all 0.5s linear;
+}
 /* HERO SECCION */
 .feature-icon {
   height: 3rem;
@@ -107,17 +119,32 @@ h4, h5 {
 
 .figcaption-label {
   background: rgba(0, 0, 0, 0.7);
-  bottom: 15%;
+  bottom: 10%;
   border-radius: 5px;
   color: white;
   display: block;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   left: 50%;
   position: absolute;
   padding: 5px 10px;
   text-align: center;
   transform: translateX(-50%);
+  width: max-content;
+}
+
+/* Aplicar estilos iniciales al botón */
+.fixed-button-container {
+  /*display: none;*/
+  opacity: 0;
+  transform: translateY(100px); /* Empieza ligeramente desplazado hacia abajo */
+  transition: opacity 0.3s, transform 0.3s; /* Agregamos transiciones suaves */
+}
+
+.fixed-button-container.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0); /* Sin desplazamiento */
 }
 
 .medalla-title-card{
@@ -173,6 +200,15 @@ footer .list-group-item {
 footer .list-group-item>a{text-decoration: none;}
 
 /* Media query para resolución SM (576px y superior) */
+@media (max-width:767px){
+  .item-carousel{
+    display: none;
+  }
+  .item-carousel.active{
+    display: block;
+  }
+}
+
 @media (min-width: 576px) and (max-width: 991.98px)  {
   .mapa-users {
     position: relative;
