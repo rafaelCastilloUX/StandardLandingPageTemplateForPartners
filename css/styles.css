@@ -88,6 +88,24 @@ h4, h5 {
   font-family: 'Mulish', sans-serif;
 }
 
+
+.hero-divorce{
+  background-image: url(../img/S2R_DivorceBG-mobile.png);
+  background-position-y: 50px;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.hero-title{
+  font-size: 40px;
+
+}
+.hero-subtitle{
+  font-size: 24px;
+}
+
+
 .hgroup{
   margin-bottom: 2.5em;
   margin-top: 2.5em;
@@ -108,7 +126,7 @@ h4, h5 {
 }
 .figure-container {
   position: relative;
-  display: inline-block; /* O display: block; dependiendo de cómo quieras usarlo */
+  display: inline-block; /* O display: block; dependiendo por definir */
 }
 
 .figure-image {
@@ -199,8 +217,10 @@ footer .list-group-item {
 }
 footer .list-group-item>a{text-decoration: none;}
 
-/* Media query para resolución SM (576px y superior) */
+
+/* Media Queries hasta resoluciones mobiles */
 @media (max-width:767px){
+  
   .item-carousel{
     display: none;
   }
@@ -209,6 +229,7 @@ footer .list-group-item>a{text-decoration: none;}
   }
 }
 
+/* Media query para resolución SM (576px y superior) */
 @media (min-width: 576px) and (max-width: 991.98px)  {
   .mapa-users {
     position: relative;
@@ -220,6 +241,21 @@ footer .list-group-item>a{text-decoration: none;}
 @media (min-width: 992px) {
   .btn-verde{
     font-size: 1.27rem;
+  }
+  
+  .hero-divorce{
+    background-image: url(../img/divorceHero-BGxl.png);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-attachment: local;
+  }
+  .hero-title{
+    font-size: 60px;
+  
+  }
+  .hero-subtitle{
+    font-size: 44px;
   }
   .mapa-users {
     position: absolute;
